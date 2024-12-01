@@ -1,43 +1,33 @@
 <?php
-// include "helper.php";
+session_start();
 
-$fileName = "users.txt";
+$page = isset($_GET['page']) ? $_GET['page'] : 'login';
 
-if (isset($_GET['submit'])) {
-    $username = $_GET['username'];
-    $old_user = file_get_contents($fileName);
-    $content = $old_user . "\n" . $username;
-    file_put_contents($fileName, $content);
-    header("location: index.php");
+if (!isset($_SESSION['username']) && $page !== 'login') {
+    header("Location: index.php?page=login");
+    exit();
 }
-$users = file_get_contents($fileName);
-$user_array = explode("\n", $users);
 
-
+switch ($page) {
+    case 'login':
+        include 'login.php';
+        break;
+    
+    case 'home':
+        include 'home.php';
+        break;
+    
+    case 'about':
+        include 'about.php';
+        break;
+    
+    case 'dashboard':
+        include 'dashboard.php';
+        break;
+    
+    default:
+        echo '<h1>404 Page Not Found</h1>';
+        echo '<a href="index.php?page=login">Go to Login</a>';
+        break;
+}
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Application</title>
-</head>
-
-<body>
-    <h1>User List</h1>
-    <ul>
-        <?php
-        foreach ($user_array as $user) {
-            echo "<li> $user <span>x</span></li>";
-        }
-        ?>
-    </ul>
-    <form action="index.php">
-        <p>Enter Username: <input type="text", name="username"></p>
-        <input type="submit", name="submit", value="Add User">
-    </form>
-</body>
-
-</html>
