@@ -14,6 +14,7 @@ body{
     margin: 10;
     padding: 0;
     font-family: Aria, sans-serif;
+    z-index: 998; 
 }
 p {
     padding: 10px;
