@@ -10,10 +10,14 @@ if (!isset($_SESSION['username'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="css/new_styles.css">
 </head>
 <body>
     <?php include 'nav.php'; ?>
+    <div class="content">
+        <h1>Dashboard</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quaerat tempore excepturi deserunt vero omnis enim non nulla? Nam similique modi quas expedita totam eos, quae maxime. Exercitationem, ex aspernatur!</p>
+    </div>
 </body>
 </html>
