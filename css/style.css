@@ -7,6 +7,7 @@ body {
     height: 100vh;
     margin: 0;
 }
+
 /* Navigation bar styling */
 .navbar {
     display: flex;
@@ -36,10 +37,12 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 300px;
 }
+
 .home-content {
     padding: 20px;
     text-align: center;
 }
+
 h2 {
     text-align: center;
     color: #333;
@@ -64,6 +67,9 @@ input {
     border-radius: 5px;
     font-size: 14px;
 }
+input[type="password"] {
+    margin-bottom: 15px;
+}
 
 button {
     width: 100%;
@@ -85,6 +91,7 @@ p {
     margin-top: 10px;
     font-size: 14px;
 }
+
 h1 {
     font-size: 36px;
     color: #333;
