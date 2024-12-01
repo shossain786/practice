@@ -1,0 +1,56 @@
+h1 {
+    background-color: rgba(218, 164, 28, 0.825);
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    zoom: 2;
+    color: rgb(107, 16, 16);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin-top: 80px;
+    z-index: 1;
+}
+body{
+    margin: 10;
+    padding: 0;
+    font-family: Aria, sans-serif;
+}
+p {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+button {
+    margin: 10px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    padding: 6px;
+    background-color: blanchedalmond;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#red {
+    background-color: red;
+    height: 20px;
+    width: 20px;
+}
+
+#green {
+    background-color: green;
+    height: 20px;
+    width: 20px;
+}
+
+#yellow {
+    background-color: yellow;
+    height: 20px;
+    width: 20px;
+}

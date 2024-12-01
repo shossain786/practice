@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/menu_bar.css">
+    <link rel="stylesheet" href="css/my_css.css">
+</head>
+
+<body>
+    <ul class="menu-bar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)">Dropdown</a>
+            <div class="dropdown-content">
+                <a href="#option1">Option 1</a>
+                <a href="#option2">Option 2</a>
+                <a href="#option3">Option 3</a>
+            </div>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <h1 class="title">HTML PAGE</h1>
+    <div>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae in repellat necessitatibus ipsam
+            nihil veniam ea aperiam soluta, nulla corporis error et ut quibusdam beatae vero corrupti minus magni. Ut.
+        </p>
+        <div class="button-container">
+            <button id="red"></button>
+            <button id="yellow"></button>
+            <button id="green"></button>
+        </div>
+    </div>
+    <div>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptatum odit aut maxime
+            necessitatibus aliquam dicta omnis asperiores? Eveniet enim illo, a sapiente ullam repellat officia
+            similique vitae modi nam!</p>
+        <button id="btn2">Click To Alert</button>
+    </div>
+    <div>
+        <b>Click me to hide.</b><br>
+        <b>Click me to hide.</b>
+    </div>
+    <div>
+        <p id="multip">Mutiple event call expamle</p>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+
+        $("#red").click(function () {
+            $("p").css({
+                "background-color": "red",
+                "color": "white"
+            });
+        });
+        $("#green").click(function () {
+            $("p").css({
+                "background-color": "green",
+                "color": "white"
+            });
+        });
+        $("#yellow").click(function () {
+            $("p").css({
+                "background-color": "yellow",
+                "color": "black"
+            });
+        });
+        $("#btn2").focus(function(){
+            $("#btn2").css({
+                "background-color": "green",
+                "color": "white"
+            });
+        });
+        $("#btn2").blur(function(){
+            $("#btn2").css({
+                "background-color": "gray",
+                "color": "white"
+            });
+        });
+
+        $("#btn2").click(function () {
+            alert('You clicked on Alert!');
+        });
+        $("b").click(function() {
+            $(this).hide("slow");
+        });
+        $("#multip").on({
+            mouseenter: function(){
+                $(this).css({
+                    "background-color": "lightgray",
+                });
+            },
+            mouseleave: function(){
+                $(this).css({
+                    "background-color": "white",
+                });
+            },
+            click: function(){
+                $(this).hide("slow");
+            }
+        });
+    });
+</script>
+
+</html>
